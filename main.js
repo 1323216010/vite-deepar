@@ -1,7 +1,7 @@
 import { DeepAR } from 'deepar';
-/* import deeparWasm from 'deepar/wasm/deepar.wasm';
-import faceTrackingModel from 'deepar/models/face/models-68-extreme.bin';
-import segmentationModel from 'deepar/models/segmentation/segmentation-160x160-opt.bin'; */
+/* import deeparWasm from '/config/deepar.wasm';
+import faceTrackingModel from '/config/models-68-extreme.bin';
+import segmentationModel from '/config/segmentation-160x160-opt.bin'; */
 
 console.log(DeepAR)
 const canvas = document.getElementById('deepar-canvas');
@@ -15,11 +15,11 @@ const deepAR = new DeepAR({
     },
   },
   segmentationConfig: {
-    modelPath: '/config/segmentation-160x160-opt.bin',
+    modelPath: '/config/models-68-extreme.bin',
   },
 });
 
-deepAR.downloadFaceTrackingModel('/config/models-68-extreme.bin');
+deepAR.downloadFaceTrackingModel('/config/segmentation-160x160-opt.bin');
 
 const effects = [
   './effects/test.deepar',
@@ -27,7 +27,6 @@ const effects = [
   './effects/Ping_Pong.deepar',
   './effects/galaxy_background.deepar',
 ];
-console.log(effects)
 let currentEffectIdx = -1;
 const btn = document.getElementById('button');
 btn.addEventListener('click', () => {
