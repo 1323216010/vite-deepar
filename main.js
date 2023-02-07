@@ -8,14 +8,14 @@ const canvas = document.getElementById('deepar-canvas');
 const deepAR = new DeepAR({
   licenseKey: 'e7354dce189b6f111ce2d13d93e484a78b25001e569db34d5b3cfc185cebddc0e0edc228d207230b',
   canvas: canvas,
-  deeparWasmPath: deeparWasm,
+  deeparWasmPath: '/effets/deepar.wasm',
   callbacks: {
     onInitialize: () => {
       deepAR.startVideo(true);
     },
   },
   segmentationConfig: {
-    modelPath: segmentationModel,
+    modelPath: '/effets/segmentation-160x160-opt.bin',
   },
 });
 
