@@ -1,4 +1,3 @@
-import { DeepAR } from 'deepar';
 /* import deeparWasm from '/config/deepar.wasm';
 import faceTrackingModel from '/config/models-68-extreme.bin';
 import segmentationModel from '/config/segmentation-160x160-opt.bin'; */
